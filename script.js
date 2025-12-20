@@ -209,6 +209,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Reset Logic
+    document.getElementById('reset-btn').addEventListener('click', () => {
+        if (confirm("¿Estás seguro de que quieres reiniciar el reto? Se borrará todo tu progreso.")) {
+            localStorage.removeItem(STORAGE_KEY);
+            location.reload();
+        }
+    });
+
     // Close modal on outside click
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
