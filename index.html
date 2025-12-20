@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Ahorro 365</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header Section -->
+        <header>
+            <img src="logo.jpg" alt="Logo Reto Ahorro" class="app-logo">
+            <h1>Reto Ahorro 365</h1>
+            <p>¡Ahorra $6,679,500 en un año!</p>
+        </header>
+
+        <!-- Stats Section -->
+        <div class="stats-card">
+            <div class="stat-item">
+                <span class="stat-label">Total Ahorrado</span>
+                <span class="stat-value" id="total-saved">$0</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <span class="stat-label">Días Restantes</span>
+                <span class="stat-value" id="days-left">365</span>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+            </div>
+            <span class="progress-text" id="progress-text">0%</span>
+        </div>
+
+        <!-- Action Section -->
+        <div class="action-area">
+            <button id="pick-btn" class="main-btn">SACAR NÚMERO</button>
+        </div>
+
+        <!-- History Section -->
+        <div class="history-section">
+            <div class="history-header">
+                <h2>Tablero de Números</h2>
+                <button id="toggle-grid-btn" class="secondary-btn">Ver Todos</button>
+            </div>
+            <p class="history-subtitle">Números disponibles y completados</p>
+
+            <div class="grid-wrapper collapsed" id="grid-wrapper">
+                <div class="grid-container" id="numbers-grid">
+                    <!-- Numbers will be generated here by JS -->
+                </div>
+                <div class="fade-overlay" id="fade-overlay"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for New Number -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-title">¡Número del Día!</h2>
+            <div class="modal-number" id="modal-number">0</div>
+            <p class="modal-subtitle">Debes ahorrar:</p>
+            <div class="modal-amount" id="modal-amount">$0</div>
+            <button class="modal-btn" id="modal-confirm-btn">¡Listo!</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

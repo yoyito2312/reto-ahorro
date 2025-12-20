@@ -1,0 +1,31 @@
+name: reto_ahorro_app
+description: Una app de reto de ahorro de 365 días con selección aleatoria acumulativa.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Para persistencia de datos (guardar progreso)
+  shared_preferences: ^2.2.0
+  
+  # Para tipografía moderna
+  google_fonts: ^5.1.0
+  
+  # Para la celebración final
+  confetti: ^0.7.0
+  
+  # Para iconos bonitos (opcional, usamos los de material por defecto pero este es útil)
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
